@@ -6,8 +6,6 @@ const PORT = 3000;
 const httpsAgent = new https.Agent({ rejectUnauthorized: false });
 app.use(express.json());
 
-
-
 app.get("/", (req, res) =>{
      res.send("Its Working");
      res.sendFile(__dirname + "/index.html")
@@ -36,8 +34,6 @@ app.get("/product/:id",async(req,res)=>{
     res.status(500).send("Internal Server Error");
 }
 });
-
-
 
 app.put("/product/:id", async(req,res)=>{
    
